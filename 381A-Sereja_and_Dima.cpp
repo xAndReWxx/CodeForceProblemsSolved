@@ -9,39 +9,39 @@ int main()
     bool SerejaTurn = true;
     cin >> numberOfCardes;
 
-    vector<int> cardes(numberOfCardes);
+    vector<int> cards(numberOfCardes);
 
 
     for (int i = 0; i < numberOfCardes; i++)
     {
-        cin >> cardes[i];
+        cin >> cards[i];
     }
 
-    for (int i = 0; cardes.size() > 0;)
+    for (int i = 0; cards.size() > 0;)
     {
-        if (cardes.size() == 1 && SerejaTurn)
+        if (cards.size() == 1 && SerejaTurn)
         {
-            serega += cardes[i];
+            serega += cards[i];
             break;
         }
-        else if (cardes.size() == 1 && !SerejaTurn)
+        else if (cards.size() == 1 && !SerejaTurn)
         {
-            dima += cardes[i];
+            dima += cards[i];
             break;
         }
 
-        if ((cardes[i] > cardes[cardes.size() - 1]))
+        if ((cards[i] > cards[cards.size() - 1]))
         {
             if (SerejaTurn)
             {
-                serega += cardes[i];
-                cardes.erase(cardes.begin());
+                serega += cards[i];
+                cards.erase(cards.begin());
                 SerejaTurn = !SerejaTurn;
             }
             else
             {
-                dima += cardes[i];
-                cardes.erase(cardes.begin());
+                dima += cards[i];
+                cards.erase(cards.begin());
                 SerejaTurn = !SerejaTurn;
             }
         }
@@ -50,14 +50,14 @@ int main()
 
             if (SerejaTurn)
             {
-                serega += cardes[cardes.size() - 1];
-                cardes.erase(cardes.end()-1);
+                serega += cards[cards.size() - 1];
+                cards.erase(cards.end()-1);
                 SerejaTurn = !SerejaTurn;
             }
             else
             {
-                dima += cardes[cardes.size() - 1];
-                cardes.erase(cardes.end() -1);
+                dima += cards[cards.size() - 1];
+                cards.erase(cards.end() -1);
                 SerejaTurn = !SerejaTurn;
             }
         }
