@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int serega = 0, dima = 0;
+    int Sereja = 0, dima = 0;
     int numberOfCardes;
     bool SerejaTurn = true;
     cin >> numberOfCardes;
@@ -21,7 +21,7 @@ int main()
     {
         if (cards.size() == 1 && SerejaTurn)
         {
-            serega += cards[i];
+            Sereja += cards[i];
             break;
         }
         else if (cards.size() == 1 && !SerejaTurn)
@@ -34,7 +34,7 @@ int main()
         {
             if (SerejaTurn)
             {
-                serega += cards[i];
+                Sereja += cards[i];
                 cards.erase(cards.begin());
                 SerejaTurn = !SerejaTurn;
             }
@@ -50,7 +50,7 @@ int main()
 
             if (SerejaTurn)
             {
-                serega += cards[cards.size() - 1];
+                Sereja += cards[cards.size() - 1];
                 cards.erase(cards.end()-1);
                 SerejaTurn = !SerejaTurn;
             }
@@ -62,6 +62,6 @@ int main()
             }
         }
     }
-    cout << serega << " " << dima;
+    cout << Sereja << " " << dima;
     return 0;
 }
